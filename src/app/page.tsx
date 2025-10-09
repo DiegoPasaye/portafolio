@@ -12,9 +12,9 @@ export default function Home() {
     <main className={styles.page}>
       <nav className={styles.navBar}>
         <NavBar />
+        <div className={styles.divisor}></div>
       </nav>
 
-      <div className={styles.divisor}></div>
 
       <section className={styles.pageBody}>
         <Presentation />

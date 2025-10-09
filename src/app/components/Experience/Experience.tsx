@@ -2,7 +2,7 @@ import styles from './Experience.module.css'
 
 export default function Experience() {
     return(
-        <div className={styles.experience}>
+        <div className={styles.experience} id='experience'>
             <h2 className='miniTittle'>EXPERIENCE</h2>
 
             <span className='tittle'>Work History</span>

@@ -3,7 +3,7 @@ import styles from './Projects.module.css'
 
 export default function Projects() {
     return(
-        <div className={styles.projects}>
+        <div className={styles.projects} id='projects'>
             <h2 className='miniTittle'>PORTFOLIO</h2>
 
             <span className='tittle'>Featured Projects</span>

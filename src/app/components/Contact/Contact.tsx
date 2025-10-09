@@ -3,7 +3,7 @@ import styles from './Contact.module.css'
 
 export default function Contact() {
     return(
-        <div className={styles.contact}>
+        <div className={styles.contact} id='contact'>
             <h2 className='miniTittle'>GET IN TOUCH</h2>
 
             <span className='tittle'>Let´s Work Together</span>

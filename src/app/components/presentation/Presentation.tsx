@@ -3,7 +3,7 @@ import styles from './Presentation.module.css'
 
 export default function Presentation() {
     return(
-        <div className={styles.presentation}>
+        <div className={styles.presentation} id="presentation">
             <span className={styles.presentationAvailable}>Available for new opportunities</span>
 
             <h1>Hello! 👋 I´m <span>Diego</span></h1>

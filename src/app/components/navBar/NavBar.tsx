@@ -14,23 +14,23 @@ export default function NavBar() {
                 <div className={styles.sectionsLink}>
                     <div className={styles.sectionsLinkContainer}>
                         <div></div>
-                        <a href="">HOME</a>
+                        <a href="#presentation">HOME</a>
                     </div>
                     <div className={styles.sectionsLinkContainer}>
                         <div></div>
-                        <a href="">ABOUT</a>
+                        <a href="#aboutMe">ABOUT</a>
                     </div>
                     <div className={styles.sectionsLinkContainer}>
                         <div></div>
-                        <a href="">PROJECTS</a>
+                        <a href="#projects">PROJECTS</a>
                     </div>
                     <div className={styles.sectionsLinkContainer}>
                         <div></div>
-                        <a href="">EXPERIENCE</a>
+                        <a href="#experience">EXPERIENCE</a>
                     </div>
                     <div className={styles.sectionsLinkContainer}>
                         <div></div>
-                        <a href="">CONTACT</a>
+                        <a href="#contact">CONTACT</a>
                     </div>
                 </div>
             </div>

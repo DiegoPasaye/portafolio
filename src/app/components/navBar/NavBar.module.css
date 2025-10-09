@@ -1,0 +1,51 @@
+.nav{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    padding: 70px 40px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+.bodyNav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} 
+.nav h2, .nav p, .nav a{
+    color: oklch(0.708 0 0);
+}
+
+.sectionsLink{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+.sectionsLinkContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sectionsLinkContainer div{
+    width: 20px;
+    border-radius: 10px;
+    background-color: oklch(0.269 0 0);
+    height: 2px;
+}
+.sectionsLinkContainer a{
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.social{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.social button{
+    background: none;
+    border: none;
+}

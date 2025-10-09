@@ -1,0 +1,41 @@
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.aboutMe h2{
+    color: oklch(0.300 0 0);
+    font-size: 18px;
+}
+.aboutMe span{
+    font-size: 48px;
+}
+.aboutMe p{
+    color: oklch(0.708 0 0);
+    width: 70%;
+    font-size: 20px;
+}
+.aboutMe h3{
+    font-size: 28px;
+}
+
+.aboutMeSkills{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutMeSkills div{
+    display: flex;
+    gap: 20px;
+}
+.aboutMeSkills h4{
+    color: oklch(0.708 0 0);
+}
+.aboutMeSkills div span{
+    font-size: 16px;
+    background: oklch(0.300 0 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+}

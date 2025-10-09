@@ -1,0 +1,69 @@
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7%;
+    height: 100vh;
+}
+.presentationAvailable{
+    background: oklch(0.100 0 0);
+    color: oklch(0.300 0 0);
+    border: none;
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+.presentation h1{
+    font-size: 64px;
+    color: oklch(0.900 0 0);
+}
+.presentationDescription{
+    color: oklch(0.708 0 0);
+    width: 50%;
+    font-size: 24px;
+}
+
+.presentationButtons{
+    display: flex;
+    gap: 20px;
+}
+.presentationButtons .viewMyWorkButton, .presentation .getInTouchButton{
+    color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+.presentationButtons .viewMyWorkButton:hover{
+    border: 1px solid oklch(0.708 0 0);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+.presentation .getInTouchButton{
+    border: 1px solid oklch(0.708 0 0);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+.presentation .getInTouchButton:hover{
+    color: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 1);
+}
+
+
+
+.presentationStats{
+    display: flex;
+    gap: 50px;
+}
+.presentationStats div span{
+    font-size: 32px;
+}
+.presentationStats div p{
+    font-size: 16px;
+    color: oklch(0.708 0 0);
+}

@@ -1,0 +1,46 @@
+.experience{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experienceRoadMap{
+    display: flex;
+    gap: 30px;
+}
+.experienceBar{
+    height: 23vh;
+    width: 1px;
+    background: oklch(0.708 0 0);
+}
+.experienceInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.experienceInfo h5{
+    font-size: 24px;
+}
+.experienceInfo h6{
+    font-size: 20px;
+    color: oklch(0.708 0 0);
+}
+.experience p{
+    color: oklch(0.708 0 0);
+    font-size: 18px;
+    width: 60%;
+}
+.experienceTime{
+  color: oklch(0.300 0 0);
+}
+.experienceInfo div{
+    display: flex;
+    gap: 10px;
+}
+.experienceInfo div span{
+    font-size: 14px !important;
+    background: oklch(0.300 0 0);
+    padding: 5px 10px;
+    border-radius: 10px;
+}

@@ -14,13 +14,12 @@ export default function Projects() {
                 <div className={styles.individualProjectCard}>
                     <Image src='/nakaweProject.png' alt='Project image' width={500} height={400}/>
                     <div className={styles.projectCardBody}>
-                        <span>Entrega-recepcion de la contraloría de Morelia</span>
+                        <span>Nakawé</span>
                         <p>A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.</p>
 
                         <div className={styles.projectsCardsTools}>
-                            <span>AngularJs</span>
+                            <span>NextJS</span>
                             <span>MySQL</span>
-                            <span>Java</span>
                         </div>
 
                         <button>Demo</button>

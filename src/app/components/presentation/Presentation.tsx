@@ -11,13 +11,14 @@ export default function Presentation() {
             <p className={styles.presentationDescription}>A software engineer passionate about crafting beautiful, accessible, and performant web experiences. I specialize in building pixel-perfect interfaces with modern technologies.</p>
 
             <div className={styles.presentationButtons}>
-                <button className={styles.viewMyWorkButton}>View My Work <Image src='/file.svg' width={20} height={20} alt="Arrow icon"/></button>
-                <button className={styles.getInTouchButton}>Get in touch</button>
+                <a href="#projects"><button className={styles.viewMyWorkButton}>View My Work <Image src='/file.svg' width={20} height={20} alt="Arrow icon"/></button></a>
+                <a href="#contact"><button className={styles.getInTouchButton}>Get in touch</button></a>
+                
             </div>
 
             <div className={styles.presentationStats}>
                 <div>
-                    <span>5+</span>
+                    <span>1+</span>
                     <p>Years Experience</p>
                 </div>
                 <div>
@@ -25,7 +26,7 @@ export default function Presentation() {
                     <p>Projects Completed</p>
                 </div>
                 <div>
-                    <span>3+</span>
+                    <span>2+</span>
                     <p>Happy Clients</p>
                 </div>
             </div>

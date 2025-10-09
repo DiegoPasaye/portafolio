@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 7%;
     height: 100vh;
+    gap: 5vh;
 }
 .presentationAvailable{
     background: oklch(0.100 0 0);
@@ -38,6 +38,9 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
+}
+.presentationButtons a{
+    text-decoration: none;
 }
 .presentationButtons .viewMyWorkButton:hover{
     border: 1px solid oklch(0.708 0 0);

@@ -7,7 +7,9 @@ export default function AboutMe() {
 
             <span>Building the web, one pixel at a time</span>
 
-            <p>I´m a software engineer with a passion for creating beautiful, intuitive user interfaces that solve real problems. My journey in web development started over 5 years ago, and I´ve been fortunate to work on diverse projects ranging from small startups to large enterprise applications. I believe that great software is built at the intersection of thoughtful design and robust engineering. Whether I´m architecting a complex frontend system or fine-tuning animations for the perfect user experience, I approach every project with attention to detail and a commitment to quality. When I´m not coding, you can find me exploring new technologies, contributing to open source projects, or sharing what I´ve learned with the developer community.</p>
+            <p>I am a software engineering student at the Universidad Tecnologica de Morelia, passionate about building beautiful and intuitive user interfaces that solve real-world problems. My journey in development started about four years ago, and I´ve spent the last eight months applying my skills to professional projects.
+
+While I´m early in my career, I am a dedicated, self-taught learner who is always open to new challenges. I thrive in team environments and am eager to contribute to innovative projects. I believe great software is built where thoughtful design meets robust engineering, and I bring that mindset to every task, committed to quality and detail.</p>
 
             <h3>Technical Skills</h3>
 

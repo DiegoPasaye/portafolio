@@ -6,6 +6,9 @@
 }
 .pageBody{
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
 }
 .page .divisor{
   margin: 0 20px 0;

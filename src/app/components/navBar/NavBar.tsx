@@ -9,7 +9,7 @@ export default function NavBar() {
 
                 <h2>Software Engineer</h2>
 
-                <p>Building beautiful and interactive experiences with clean, efficient code.</p>
+                <p>Building beautiful and interactive experiences with clean and efficient code.</p>
 
                 <div className={styles.sectionsLink}>
                     <div className={styles.sectionsLinkContainer}>

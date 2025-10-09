@@ -12,15 +12,30 @@ export default function Experience() {
                 <div className={styles.experienceBar}></div>
 
                 <div className={styles.experienceInfo}>
-                    <span className={styles.experienceTime}>2022-Present</span>
-                    <h5>Senior Frontend Engineer</h5>
-                    <h6>Tech Innovations Inc.</h6>
+                    <span className={styles.experienceTime}>2025-Present</span>
+                    <h5>Junior Frontend Engineer</h5>
+                    <h6>Nakawé.</h6>
 
-                    <p>Leading frontend development for enterprise SaaS platform. Architected component library used across 5+ products. Mentored junior developers and established best practices.</p>
+                    <p>Frontend development for the creation of a website benefiting Mexican artisans.</p>
 
                     <div>
-                        <span>Java</span>
-                        <span>Angular</span>
+                        <span>NextJs</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.experienceRoadMap}>
+                <div className={styles.experienceBar}></div>
+
+                <div className={styles.experienceInfo}>
+                    <span className={styles.experienceTime}>2024-2024</span>
+                    <h5>Junior Frontend Engineer</h5>
+                    <h6>Contraloría Municipal de Morelia.</h6>
+
+                    <p>Frontend development for the creation of a web project for the delivery-reception of the municipal comptroller´s department.</p>
+
+                    <div>
+                        <span>NextJs</span>
                         <span>MySQL</span>
                     </div>
                 </div>

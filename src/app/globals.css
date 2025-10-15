@@ -34,4 +34,8 @@ nav{
   .tittle{
     font-size: 40px;
   }
+  .description{
+    width: 90%;
+    font-size: 18px;
+  }
 }

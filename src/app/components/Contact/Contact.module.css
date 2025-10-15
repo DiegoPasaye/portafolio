@@ -78,20 +78,23 @@
         flex-direction: column;
     }
     .contactSection form{
-        width: 95%;
+        width: 90%;
         padding: 15px;
     }
     .contactExtraModule{
         gap: 30px;
     }
     .contactExtraModule div{
-        width: 95%;
+        width: 90%;
     }
     .contactDifferentConnectText{
-        width: 95%;
+        width: 90%;
     }
     .contactExtraModuleContainer{
         width: 100%;
         padding: 15px;
+    }
+    .description{
+        width: 90%;
     }
 }

@@ -25,6 +25,21 @@ export default function Projects() {
                         <button>Demo</button>
                     </div>
                 </div>
+                <div className={styles.individualProjectCard}>
+                    <Image src='/pladiermoProject.jpeg' alt='Project image' width={500} height={400}/>
+                    <div className={styles.projectCardBody}>
+                        <span>Pladiermo</span>
+                        <p>A web application designed to streamline the official handover process for the Municipal Comptroller´s Office of Morelia.</p>
+
+                        <div className={styles.projectsCardsTools}>
+                            <span>Angular</span>
+                            <span>Spring boot</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <button>Demo</button>
+                    </div>
+                </div>
             </section>
         </div>
     )

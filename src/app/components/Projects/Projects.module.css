@@ -12,7 +12,7 @@
 }
 
 .individualProjectCard{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -38,6 +38,11 @@
     border: 1px solid rgba(255, 255, 255, 0.9);
     color: rgba(255, 255, 255, 0.9);
 }
+.projectsCards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 .projectsCards div img{
     width: 100%;
     border-radius: 10px;
@@ -59,4 +64,35 @@
     background: oklch(0.300 0 0);
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+@media(max-width: 1000px){
+    .individualProjectCard{
+        width: 80%;
+    }
+    .description{
+        width: 90%;
+    }
+}
+@media(max-width: 800px){
+    .individualProjectCard{
+        width: 100%;
+    }
+    .description{
+        width: 90%;
+    }
+}
+@media(max-width:500px){
+  .description{
+    width: 95%;
+  }
+  .projects{
+    margin-top: 10%;
+  }
+}
+@media(max-width:400px){
+
+  .projects{
+    margin-top: 40%;
+  }
 }

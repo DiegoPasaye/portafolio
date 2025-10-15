@@ -71,3 +71,27 @@
 .contactExtraModuleContainer div p{
     color: oklch(0.708 0 0);
 }
+
+@media(max-width: 850px){
+    .contactSection{
+        display: flex;
+        flex-direction: column;
+    }
+    .contactSection form{
+        width: 95%;
+        padding: 15px;
+    }
+    .contactExtraModule{
+        gap: 30px;
+    }
+    .contactExtraModule div{
+        width: 95%;
+    }
+    .contactDifferentConnectText{
+        width: 95%;
+    }
+    .contactExtraModuleContainer{
+        width: 100%;
+        padding: 15px;
+    }
+}

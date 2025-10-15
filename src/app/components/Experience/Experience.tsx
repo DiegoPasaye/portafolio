@@ -35,7 +35,8 @@ export default function Experience() {
                     <p>Frontend development for the creation of a web project for the delivery-reception of the municipal comptroller´s department.</p>
 
                     <div>
-                        <span>NextJs</span>
+                        <span>Angular</span>
+                        <span>Spring boot</span>
                         <span>MySQL</span>
                     </div>
                 </div>

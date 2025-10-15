@@ -70,3 +70,21 @@
     font-size: 16px;
     color: oklch(0.708 0 0);
 }
+
+@media(max-width: 850px){
+    .presentation{
+        justify-content: flex-start;
+        height: max-content;
+    }
+    .presentationDescription{
+        width: 80%;
+    }
+}
+@media(max-width:500px){
+  .presentation h1{
+    font-size: 56px;
+  }
+  .presentationDescription{
+    width: 90%;
+  }
+}

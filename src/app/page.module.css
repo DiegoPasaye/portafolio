@@ -29,3 +29,21 @@
 .pageBody{
   padding: 25px;
 }
+@media(max-width:850px){
+  .page{
+    display: flex;
+    flex-direction: column;
+  }
+  .page .divisor{
+    display: none;
+  }
+  .navBar{
+    width: 105vw;
+    justify-content: space-between;
+    height: max-content;
+    box-sizing: border-box;
+
+  }
+}
+@media(max-width:500px){
+}

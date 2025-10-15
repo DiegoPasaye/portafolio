@@ -37,8 +37,8 @@ export default function NavBar() {
 
             <div className={styles.social}>
                 <a href='https://github.com/DiegoPasaye'><Image src='/github.svg' alt='Github icon' width={25} height={25}/></a>
-                <a href=''><Image src='/linkedin.svg' alt='Linkedin icon' width={25} height={25}/></a>
-                <a href=''><Image src='/gmail.svg' alt='Email icon' width={25} height={25}/></a>
+                <a href='https://www.linkedin.com/in/diegopasaye/'><Image src='/linkedin.svg' alt='Linkedin icon' width={25} height={25}/></a>
+                <a href='mailto:pasayealvarado@gmail.com?subject=Hola%te%contacto%20por%20tu%20portafolio'><Image src='/gmail.svg' alt='Email icon' width={25} height={25}/></a>
             </div>
         </div>
     )

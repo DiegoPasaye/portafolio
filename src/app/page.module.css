@@ -38,7 +38,7 @@
     display: none;
   }
   .navBar{
-    width: 105vw;
+    width: 100vw;
     justify-content: space-between;
     height: max-content;
     box-sizing: border-box;

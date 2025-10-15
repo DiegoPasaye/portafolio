@@ -29,7 +29,13 @@
 .pageBody{
   padding: 25px;
 }
+
 @media(max-width:850px){
+  .pageBody{
+    padding: 0;
+    width: 95%;
+    margin-left: 2.5%;
+  }
   .page{
     display: flex;
     flex-direction: column;

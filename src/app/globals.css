@@ -26,7 +26,12 @@ button, a{
   cursor: pointer;
 }
 nav{
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+@media(max-width: 500px){
+  .tittle{
+    font-size: 40px;
+  }
 }

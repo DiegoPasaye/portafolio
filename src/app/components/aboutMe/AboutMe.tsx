@@ -3,9 +3,9 @@ import styles from './AboutMe.module.css'
 export default function AboutMe() {
     return(
         <div className={styles.aboutMe} id='aboutMe'>
-            <h2>ABOUT ME</h2>
+            <h2 className='miniTittle'>ABOUT ME</h2>
 
-            <span>Building the web, one pixel at a time</span>
+            <span className='tittle'>Building the web, one pixel at a time</span>
 
             <p>I am a software engineering student at the Universidad Tecnologica de Morelia, passionate about building beautiful and intuitive user interfaces that solve real-world problems. My journey in development started about four years ago, and I´ve spent the last eight months applying my skills to professional projects.
 

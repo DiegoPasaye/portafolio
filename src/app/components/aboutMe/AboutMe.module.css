@@ -10,9 +10,7 @@
     color: oklch(0.300 0 0);
     font-size: 18px;
 }
-.aboutMe span{
-    font-size: 48px;
-}
+
 .aboutMe p{
     color: oklch(0.708 0 0);
     width: 70%;

@@ -21,7 +21,7 @@ export default function Contact() {
     <section id="contact" className="scroll-mt-24 border-t border-line">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
         <div className="flex items-center gap-4 font-mono text-xs tracking-widest text-faint">
-          <span className="text-accent">04</span>
+          <span className="text-accent">05</span>
           <span className="h-px w-8 bg-line-strong" />
           <span>CONTACT</span>
         </div>

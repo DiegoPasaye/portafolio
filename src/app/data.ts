@@ -5,7 +5,7 @@ export const profile = {
   role: 'Software Engineer',
   tagline: 'Building beautiful and interactive experiences with clean and efficient code.',
   email: 'pasayealvarado@gmail.com',
-  location: 'Remote / Available Worldwide',
+  location: 'Morelia, México · Remote-friendly',
 }
 
 export const navLinks = [

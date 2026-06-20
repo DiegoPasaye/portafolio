@@ -1,41 +1,73 @@
-*{
-  color: oklch(0.900 0 0);
-  margin: 0;
-  padding: 0;
-  transition: 0.3s;
-  font-family: 'GeistSans';
-  scroll-behavior: smooth;
-}
-body{
-  background: oklch(0.145 0 0);
+@import "tailwindcss";
+
+/* ===== Design tokens (Tailwind v4 @theme → utilities + CSS vars) ===== */
+@theme {
+  --color-bg: oklch(0.135 0 0);
+  --color-surface: oklch(0.175 0 0);
+  --color-fg: oklch(0.975 0 0);
+  --color-muted: oklch(0.72 0 0);
+  --color-faint: oklch(0.5 0 0);
+  --color-line: oklch(1 0 0 / 0.1);
+  --color-line-strong: oklch(1 0 0 / 0.2);
+  /* sparingly-used accent — terminal "run green". Set to var(--color-fg) for pure mono. */
+  --color-accent: oklch(0.88 0.22 132);
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-marquee: marquee 32s linear infinite;
 }
 
-.miniTittle{
-  color: oklch(0.300 0 0);
-  font-size: 18px;
-}
-.tittle{
-  font-size: 48px;
-}
-.description{
-  color: oklch(0.708 0 0);
-  width: 70%;
-  font-size: 20px;
-}
-button, a{
-  cursor: pointer;
-}
-nav{
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-}
-@media(max-width: 500px){
-  .tittle{
-    font-size: 40px;
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
   }
-  .description{
-    width: 90%;
-    font-size: 18px;
+}
+
+/* ===== Base ===== */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  button {
+    cursor: pointer;
+  }
+  ::selection {
+    background: var(--color-fg);
+    color: var(--color-bg);
+  }
+  h1, h2, h3 {
+    letter-spacing: -0.03em;
+  }
+}
+
+/* ===== Split-text reveal: each line clipped, child translated up ===== */
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* hide native cursor only where a custom one is active (fine pointers) */
+@media (pointer: fine) {
+  .cursor-none-fine,
+  .cursor-none-fine * {
+    cursor: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }

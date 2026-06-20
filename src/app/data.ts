@@ -23,9 +23,9 @@ export const socials = [
 ]
 
 export const stats = [
-  { value: 1, suffix: '+', label: 'Years Experience' },
-  { value: 5, suffix: '+', label: 'Projects Completed' },
-  { value: 2, suffix: '+', label: 'Happy Clients' },
+  { value: 4, suffix: '+', label: 'Years Coding' },
+  { value: 2, suffix: '', label: 'Production Apps' },
+  { value: 8, suffix: '+', label: 'Months Pro Work' },
 ]
 
 export const skills = [

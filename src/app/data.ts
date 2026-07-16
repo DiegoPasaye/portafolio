@@ -36,6 +36,14 @@ export const skills = [
 
 export const projects = [
   {
+    name: 'Licita',
+    image: '/licitaProject.png',
+    description:
+      'An AI-assisted platform that centralizes public-works tender data and generates economic, technical, and legal proposal documents in one traceable workflow.',
+    tools: ['Next.js', 'FastAPI', 'Supabase', 'Vercel'],
+    demo: 'https://licitacionfrontend.vercel.app',
+  },
+  {
     name: 'Nakawé',
     image: '/nakaweProject.png',
     description:
@@ -55,18 +63,27 @@ export const projects = [
 
 export const experience = [
   {
-    time: '2025-Present',
-    role: 'Junior Frontend Engineer',
-    company: 'Nakawé.',
-    description: 'Frontend development for the creation of a website benefiting Mexican artisans.',
+    time: 'Nov 2025 — Present',
+    role: 'Junior Full Stack Engineer',
+    company: 'Cumicsa Construcciones S.A. de C.V.',
+    description:
+      'Developing an AI-assisted platform that automates public-works tender workflows for construction companies in Mexico.',
+    tools: ['NextJs', 'Supabase', 'FastAPI', 'Vercel'],
+  },
+  {
+    time: 'Jun 2025 — Nov 2025',
+    role: 'Junior Full Stack Engineer',
+    company: 'Nakawe Foundation',
+    description:
+      'Developed an e-commerce platform to improve the visibility of artisan products and facilitate sales across Mexico.',
     tools: ['NextJs', 'MySQL'],
   },
   {
-    time: '2024-2024',
-    role: 'Junior Frontend Engineer',
-    company: 'Contraloría Municipal de Morelia.',
+    time: 'Mar 2024 — Sep 2024',
+    role: 'Frontend Developer',
+    company: "Municipal Comptroller's Office of Morelia",
     description:
-      "Frontend development for the creation of a web project for the delivery-reception of the municipal comptroller's department.",
+      "Contributed to Pladiermo, a platform for managing the municipal administration's official handover process.",
     tools: ['Angular', 'Spring boot', 'MySQL'],
   },
 ]

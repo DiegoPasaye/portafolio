@@ -19,9 +19,9 @@ const jsonLd = {
       familyName: 'Pasaye',
       url: SITE,
       // image: add once a real hosted headshot exists in /public (boosts knowledge-panel eligibility).
-      jobTitle: 'Junior Frontend Engineer',
+      jobTitle: 'Junior Full Stack Engineer',
       description:
-        'Software-engineering student and junior frontend engineer based in Morelia, México, building accessible, performant web interfaces with React and Next.js.',
+        'Software-engineering student and junior full stack engineer based in Morelia, México, building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
       email: 'mailto:pasayealvarado@gmail.com',
       knowsLanguage: ['es-MX', 'en'],
       address: {
@@ -37,14 +37,15 @@ const jsonLd = {
       },
       worksFor: {
         '@type': 'Organization',
-        name: 'Nakawé',
+        name: 'Cumicsa Construcciones S.A. de C.V.',
       },
       hasOccupation: {
         '@type': 'Occupation',
-        name: 'Frontend Engineer',
+        name: 'Full Stack Engineer',
         occupationalCategory: '15-1254.00', // O*NET-SOC: Web Developers
       },
       knowsAbout: [
+        'Full Stack Development',
         'Frontend Development',
         'Next.js',
         'React',
@@ -55,8 +56,11 @@ const jsonLd = {
         'CSS',
         'Node.js',
         'Python',
+        'FastAPI',
+        'Supabase',
         'MySQL',
         'MongoDB',
+        'Vercel',
         'UI/UX Design',
         'Web Accessibility',
       ],
@@ -72,7 +76,7 @@ const jsonLd = {
       alternateName: 'Diego Pasaye',
       url: SITE,
       description:
-        "Single-page portfolio covering Diego Pasaye's bio, skills, projects, and work experience as a junior frontend engineer in Morelia, México.",
+        "Single-page portfolio covering Diego Pasaye's bio, skills, projects, and work experience as a junior full stack engineer in Morelia, México.",
       inLanguage: 'en',
       publisher: { '@id': `${SITE}/#person` },
       author: { '@id': `${SITE}/#person` },
@@ -92,6 +96,15 @@ const jsonLd = {
         cssSelector: ['#presentation h1', '#presentation p', '#aboutMe p'],
       },
       hasPart: [
+        {
+          '@type': 'SoftwareApplication',
+          name: 'Licita',
+          url: 'https://licitacionfrontend.vercel.app',
+          description:
+            'An AI-assisted platform that centralizes public-works tender data and generates economic, technical, and legal proposal documents in one traceable workflow.',
+          applicationCategory: 'BusinessApplication',
+          author: { '@id': `${SITE}/#person` },
+        },
         {
           '@type': 'SoftwareSourceCode',
           name: 'Nakawé',
@@ -122,7 +135,7 @@ const jsonLd = {
           name: 'Who is Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Diego Pasaye is a junior frontend engineer and software-engineering student at the Universidad Tecnológica de Morelia, in Morelia, México. He builds accessible, performant web interfaces with React, Next.js, and TypeScript.',
+            text: 'Diego Pasaye is a junior full stack engineer and software-engineering student at the Universidad Tecnológica de Morelia, in Morelia, México. He builds accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
           },
         },
         {
@@ -130,7 +143,7 @@ const jsonLd = {
           name: 'What does Diego Pasaye build?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Full-stack and frontend web apps — including Nakawé, a Next.js and MySQL e-commerce platform supporting Mexican artisans, and Pladiermo, an Angular and Spring Boot handover application for the Municipal Comptroller’s Office of Morelia.',
+            text: 'Full-stack and frontend web apps — including Licita, an AI-assisted public-works tender platform; Nakawé, a Next.js and MySQL e-commerce platform supporting Mexican artisans; and Pladiermo, an Angular and Spring Boot handover application for the Municipal Comptroller’s Office of Morelia.',
           },
         },
         {

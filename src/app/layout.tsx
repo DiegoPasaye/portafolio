@@ -11,14 +11,17 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://diegopasaye.dev'),
   title: 'Diego Pasaye — Software Engineer',
   description:
-    'Diego Pasaye is a junior frontend engineer and software-engineering student in Morelia, México, building accessible, performant web interfaces with React and Next.js.',
+    'Diego Pasaye is a junior full stack engineer and software-engineering student in Morelia, México, building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
   keywords: [
     'Diego Pasaye',
     'Diego Pasaye developer',
+    'full stack engineer',
     'frontend engineer',
     'software engineer',
     'React developer',
     'Next.js developer',
+    'FastAPI developer',
+    'Supabase developer',
     'Morelia',
     'México',
     'web developer portfolio',
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Diego Pasaye — Software Engineer',
     description:
-      'Junior frontend engineer in Morelia, México — building accessible, performant web interfaces with React and Next.js.',
+      'Junior full stack engineer in Morelia, México — building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
     url: 'https://diegopasaye.dev',
     siteName: 'Diego Pasaye',
     locale: 'en_US',
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Diego Pasaye — Software Engineer',
-    description: 'Junior frontend engineer in Morelia, México — React & Next.js.',
+    description: 'Junior full stack engineer in Morelia, México — React, Next.js, FastAPI & Supabase.',
   },
   robots: {
     index: true,

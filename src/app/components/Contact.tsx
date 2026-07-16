@@ -1,20 +1,42 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Reveal from './Reveal'
 import { profile, socials } from '../data'
 
+// Web3Forms access key. Delivers submissions to the inbox tied to the key (pasayealvarado@gmail.com).
+// Public by design (ships in the HTML); rate-limited server-side. Get one free at https://web3forms.com.
+const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+
 export default function Contact() {
-  // ponytail: mailto submit — opens the user's mail client, no backend to run/secure.
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'ok' | 'error'>('idle')
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const fd = new FormData(e.currentTarget)
-    const name = String(fd.get('name') ?? '')
-    const email = String(fd.get('email') ?? '')
-    const message = String(fd.get('message') ?? '')
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)
-    window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
+    const form = e.currentTarget
+    const fd = new FormData(form)
+    fd.append('access_key', ACCESS_KEY ?? '')
+    fd.append('subject', `Portfolio contact from ${fd.get('name') ?? ''}`)
+    fd.append('from_name', 'diegopasaye.dev')
+
+    setStatus('sending')
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: fd,
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('ok')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -37,6 +59,15 @@ export default function Contact() {
         <div className="mt-16 grid gap-12 md:mt-24 md:grid-cols-2 md:gap-20">
           <Reveal>
             <form onSubmit={onSubmit} className="flex flex-col gap-6">
+              {/* honeypot — bots fill it, humans never see it */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <label className="flex flex-col gap-2">
                 <span className="font-mono text-xs tracking-widest text-faint">NAME</span>
                 <input
@@ -70,11 +101,22 @@ export default function Contact() {
               <button
                 type="submit"
                 data-cursor
-                className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-fg px-7 py-3.5 text-sm font-medium text-bg"
+                disabled={status === 'sending'}
+                className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-fg px-7 py-3.5 text-sm font-medium text-bg disabled:opacity-60"
               >
-                Send Message
+                {status === 'sending' ? 'Sending…' : 'Send Message'}
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
+              {status === 'ok' && (
+                <p className="font-mono text-xs tracking-widest text-accent">
+                  MESSAGE SENT — I’LL GET BACK TO YOU SOON.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="font-mono text-xs tracking-widest text-faint">
+                  SOMETHING WENT WRONG. EMAIL ME DIRECTLY AT {profile.email}.
+                </p>
+              )}
             </form>
           </Reveal>
 

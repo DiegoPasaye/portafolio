@@ -6,11 +6,11 @@ import SectionHeading from './SectionHeading'
 const faqs = [
   {
     q: 'Who is Diego Pasaye?',
-    a: 'Diego Pasaye is a junior frontend engineer and software-engineering student at the Universidad Tecnológica de Morelia, in Morelia, México. He builds accessible, performant web interfaces with React, Next.js, and TypeScript.',
+    a: 'Diego Pasaye is a junior full stack engineer and software-engineering student at the Universidad Tecnológica de Morelia, in Morelia, México. He builds accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
   },
   {
     q: 'What does Diego Pasaye build?',
-    a: 'Full-stack and frontend web apps — including Nakawé, a Next.js and MySQL e-commerce platform supporting Mexican artisans, and Pladiermo, an Angular and Spring Boot handover application for the Municipal Comptroller’s Office of Morelia.',
+    a: 'Full-stack and frontend web apps — including Licita, an AI-assisted public-works tender platform; Nakawé, a Next.js and MySQL e-commerce platform supporting Mexican artisans; and Pladiermo, an Angular and Spring Boot handover application for the Municipal Comptroller’s Office of Morelia.',
   },
   {
     q: 'How can I contact Diego Pasaye?',

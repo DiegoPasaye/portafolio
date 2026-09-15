@@ -42,6 +42,17 @@ El build de producción finalizó correctamente y generó 13 páginas estáticas
 - `Person`, `WebSite`, `ProfilePage`, `FAQPage`, `WebPage` y `CreativeWork` en los documentos correspondientes.
 - los enlaces de proyecto dentro del schema principal apuntan a los casos de estudio canónicos de `diegopasaye.dev`.
 
+## Cobertura por proyecto
+
+Las páginas de proyecto ahora tienen una estrategia individual de SEO y GEO:
+
+- título y descripción que responden a su intención de búsqueda, sin repetir la metadata de la portada;
+- términos temáticos visibles, explicación de la participación de Diego y preguntas frecuentes visibles;
+- `WebPage`, `CreativeWork`, `BreadcrumbList` y `FAQPage` que coinciden con el contenido del HTML;
+- enlaces canónicos internos usados desde `llms.txt`, `llms-full.txt`, sitemap y schema principal.
+
+Durante la auditoría pública, Google no devolvió resultados para las cuatro rutas de caso de estudio. Esto no mide su calidad: las rutas deben desplegarse, devolver `200` y solicitarse para indexación antes de que puedan competir por consultas como "automatización de licitaciones".
+
 ## Pasos posteriores al despliegue
 
 1. Publicar esta versión y volver a comprobar las cinco URLs con respuesta `200`.

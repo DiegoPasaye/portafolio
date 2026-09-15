@@ -6,7 +6,7 @@ import SectionHeading from './SectionHeading'
 const faqs = [
   {
     q: '¿Quién es Diego Pasaye?',
-    a: 'Diego Pasaye es Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
+    a: 'Diego Pasaye es Desarrollador Full Stack con más de 18 meses de experiencia profesional y egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
   },
   {
     q: '¿Qué productos desarrolla Diego Pasaye?',

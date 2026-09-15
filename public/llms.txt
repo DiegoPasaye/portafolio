@@ -1,6 +1,6 @@
 # Diego Pasaye
 
-> Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán, México. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial para construcción, comercio electrónico, gobierno y servicios.
+> Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán, México, con más de 18 meses de experiencia profesional. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial para construcción, comercio electrónico, gobierno y servicios.
 
 ## Canonical pages
 
@@ -16,6 +16,7 @@
 - Stack principal: React, Next.js, TypeScript, Python, FastAPI, APIs REST, MySQL, MongoDB, inteligencia artificial y automatización de procesos.
 - Educación: Ingeniería en Tecnologías de la Información, Universidad Tecnológica de Morelia (2022–2026).
 - Experiencia: desarrollo frontend para gobierno y desarrollo full stack para comercio electrónico y automatización de licitaciones.
+- Trayectoria: más de 18 meses de experiencia profesional entre gobierno, comercio electrónico y construcción.
 - Idioma: inglés con competencia básica profesional.
 - Disponible para: oportunidades Full Stack en México y equipos remotos internacionales.
 

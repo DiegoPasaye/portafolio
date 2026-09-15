@@ -20,17 +20,18 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   if (!project) return {}
 
-  const title = `${project.name} | Diego Pasaye`
+  const title = project.seoTitle
   const url = `/${project.slug}`
 
   return {
     title,
-    description: project.summary,
+    description: project.seoDescription,
+    keywords: project.keyPhrases,
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
       title,
-      description: project.summary,
+      description: project.seoDescription,
       url,
       siteName: SITE_NAME,
       locale: 'es_MX',
@@ -39,7 +40,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     twitter: {
       card: 'summary_large_image',
       title,
-      description: project.summary,
+      description: project.seoDescription,
       images: [{ url: project.image, alt: `${project.name} — Diego Pasaye` }],
     },
   }
@@ -61,6 +62,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         url: canonicalUrl,
         name: `${project.name} | Diego Pasaye`,
         description: project.summary,
+        keywords: project.keyPhrases,
         inLanguage: 'es-MX',
         isPartOf: { '@id': `${SITE_URL}/#website` },
         mainEntity: { '@id': `${canonicalUrl}#project` },
@@ -75,6 +77,42 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         inLanguage: 'es-MX',
         author: { '@id': `${SITE_URL}/#person` },
         mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Inicio',
+            item: SITE_URL,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Proyectos',
+            item: `${SITE_URL}/#projects`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: project.name,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${canonicalUrl}#faq`,
+        mainEntity: project.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
     ],
   }
@@ -92,6 +130,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <span>←</span>
         VOLVER A PROYECTOS
       </Link>
+
+      <nav aria-label="Ruta de navegación" className="mt-8 flex gap-2 font-mono text-xs text-faint">
+        <Link href="/" className="hover:text-fg">
+          INICIO
+        </Link>
+        <span aria-hidden="true">/</span>
+        <Link href="/#projects" className="hover:text-fg">
+          PROYECTOS
+        </Link>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page" className="text-muted">
+          {project.name.toUpperCase()}
+        </span>
+      </nav>
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-20">
         <div className="overflow-hidden rounded-2xl border border-line bg-surface">
@@ -128,6 +180,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
+          <div className="mt-8">
+            <p className="font-mono text-xs tracking-widest text-faint">TEMAS</p>
+            <ul className="mt-4 flex flex-wrap gap-2" aria-label={`Temas de ${project.name}`}>
+              {project.keyPhrases.map((phrase) => (
+                <li key={phrase} className="rounded-full border border-line px-3 py-1 font-mono text-xs text-faint">
+                  {phrase}
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {project.demo ? (
             <a
               href={project.demo}
@@ -149,6 +212,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+      </section>
+
+      <section className="mt-20 max-w-3xl border-t border-line pt-10 md:mt-32 md:pt-14" aria-labelledby="project-faqs">
+        <p className="font-mono text-xs tracking-widest text-accent">PREGUNTAS FRECUENTES</p>
+        <h2 id="project-faqs" className="mt-4 text-3xl font-semibold tracking-tight">
+          {project.name}: contexto y participación
+        </h2>
+        <dl className="mt-8 space-y-8">
+          {project.faqs.map((faq) => (
+            <div key={faq.question}>
+              <dt className="text-lg font-medium">{faq.question}</dt>
+              <dd className="mt-3 leading-relaxed text-muted">{faq.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </main>
   )

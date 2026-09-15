@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Diego Pasaye — Desarrollador Full Stack',
   description:
-    'Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
+    'Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán, con más de 18 meses de experiencia profesional. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
   keywords: [
     'Diego Pasaye',
     'Diego Pasaye developer',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Diego Pasaye — Desarrollador Full Stack',
     description:
-      'Desarrollador Full Stack en Morelia, Michoacán. React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
+      'Desarrollador Full Stack en Morelia, Michoacán, con más de 18 meses de experiencia profesional. React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
     url: 'https://diegopasaye.dev',
     siteName: 'Diego Pasaye',
     locale: 'es_MX',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Diego Pasaye — Desarrollador Full Stack',
-    description: 'React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
+    description: 'Más de 18 meses de experiencia profesional con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
   },
   robots: {
     index: true,

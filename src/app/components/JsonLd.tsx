@@ -24,7 +24,7 @@ const jsonLd = {
       // image: add once a real hosted headshot exists in /public (boosts knowledge-panel eligibility).
       jobTitle: 'Desarrollador Full Stack',
       description:
-        'Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información, con experiencia en productos web para construcción, comercio electrónico y gobierno.',
+        'Desarrollador Full Stack con más de 18 meses de experiencia profesional y egresado de Ingeniería en Tecnologías de la Información, con experiencia en productos web para construcción, comercio electrónico y gobierno.',
       email: 'mailto:pasayealvarado@gmail.com',
       knowsLanguage: ['es-MX', 'en'],
       address: {
@@ -143,7 +143,7 @@ const jsonLd = {
           name: '¿Quién es Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Diego Pasaye es Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
+            text: 'Diego Pasaye es Desarrollador Full Stack con más de 18 meses de experiencia profesional y egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
           },
         },
         {

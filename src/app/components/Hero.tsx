@@ -111,7 +111,7 @@ export default function Hero() {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p data-fade className="max-w-lg text-pretty text-sm leading-relaxed text-muted md:text-base">
-            Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información.
+            Desarrollador Full Stack con más de 18 meses de experiencia profesional y egresado de Ingeniería en Tecnologías de la Información.
             Construyo productos web para los sectores de construcción, comercio electrónico y gobierno.
           </p>
           <div data-fade className="flex shrink-0 gap-3">

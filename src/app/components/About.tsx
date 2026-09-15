@@ -9,21 +9,19 @@ export default function About() {
   return (
     <section id="aboutMe" className="scroll-mt-24">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-        <SectionHeading index="01" eyebrow="ABOUT" title="Building the web, one pixel at a time" />
+        <SectionHeading index="01" eyebrow="SOBRE MÍ" title="Productos web para retos reales" />
 
         <div className="mt-14 grid gap-10 md:grid-cols-2 md:gap-16">
           <Reveal className="flex flex-col gap-5 text-base leading-relaxed text-muted md:text-lg">
             <p>
-              I am a software engineering student at the Universidad Tecnologica de Morelia,
-              passionate about building beautiful and intuitive user interfaces that solve real-world
-              problems. My journey in development started about four years ago, and I’ve spent the
-              last eight months applying my skills to professional projects.
+              Soy Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la
+              Información por la Universidad Tecnológica de Morelia. He participado en equipos pequeños
+              para construir productos web en los sectores de construcción, comercio electrónico y gobierno.
             </p>
             <p>
-              While I’m early in my career, I am a dedicated, self-taught learner who is always open
-              to new challenges. I thrive in team environments and am eager to contribute to
-              innovative projects. I believe great software is built where thoughtful design meets
-              robust engineering.
+              Trabajo con React, Next.js, TypeScript, Python, FastAPI, APIs REST y bases de datos;
+              también integro inteligencia artificial y automatización de procesos. Me enfoco en
+              convertir necesidades operativas en soluciones digitales funcionales y claras.
             </p>
           </Reveal>
 

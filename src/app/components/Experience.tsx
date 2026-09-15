@@ -38,7 +38,7 @@ export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-24">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-        <SectionHeading index="03" eyebrow="CAREER" title="Work History" />
+        <SectionHeading index="03" eyebrow="TRAYECTORIA" title="Experiencia profesional" />
 
         <div ref={timeline} className="relative mt-16 pl-10 md:mt-24">
           <div className="absolute bottom-2 left-[7px] top-2 w-px bg-line">

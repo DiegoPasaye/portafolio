@@ -7,11 +7,11 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-36">
-        <SectionHeading index="02" eyebrow="WORK" title="Featured Projects" />
+        <SectionHeading index="02" eyebrow="PROYECTOS" title="Proyectos destacados" />
         <Reveal className="mt-6 max-w-xl text-muted">
           <p>
-            A selection of projects that showcase my skills in frontend development, UI/UX design,
-            and full-stack engineering.
+            Productos web desarrollados para resolver necesidades operativas en construcción,
+            comercio electrónico, gobierno y servicios.
           </p>
         </Reveal>
 

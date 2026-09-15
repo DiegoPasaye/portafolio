@@ -1,12 +1,10 @@
 import type { MetadataRoute } from 'next'
+import { projects } from './data'
+import { SITE_URL } from './site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: 'https://diegopasaye.dev',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
+    { url: SITE_URL },
+    ...projects.map((project) => ({ url: `${SITE_URL}/${project.slug}` })),
   ]
 }

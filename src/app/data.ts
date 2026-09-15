@@ -2,18 +2,18 @@
 
 export const profile = {
   name: 'Diego Pasaye',
-  role: 'Software Engineer',
-  tagline: 'Building beautiful and interactive experiences with clean and efficient code.',
+  role: 'Desarrollador Full Stack',
+  tagline: 'Construyo productos web reales con React, Next.js, TypeScript, Python e inteligencia artificial.',
   email: 'pasayealvarado@gmail.com',
   location: 'Morelia, México · Remote-friendly',
 }
 
 export const navLinks = [
-  { id: 'presentation', label: 'HOME' },
-  { id: 'aboutMe', label: 'ABOUT' },
-  { id: 'projects', label: 'PROJECTS' },
-  { id: 'experience', label: 'EXPERIENCE' },
-  { id: 'contact', label: 'CONTACT' },
+  { id: 'presentation', label: 'INICIO' },
+  { id: 'aboutMe', label: 'SOBRE MÍ' },
+  { id: 'projects', label: 'PROYECTOS' },
+  { id: 'experience', label: 'EXPERIENCIA' },
+  { id: 'contact', label: 'CONTACTO' },
 ]
 
 export const socials = [
@@ -23,67 +23,117 @@ export const socials = [
 ]
 
 export const stats = [
-  { value: 4, suffix: '+', label: 'Years Coding' },
-  { value: 2, suffix: '', label: 'Production Apps' },
-  { value: 8, suffix: '+', label: 'Months Pro Work' },
+  { value: 4, suffix: '', label: 'PROYECTOS DESTACADOS' },
+  { value: 3, suffix: '', label: 'SECTORES' },
+  { value: 2024, suffix: '', label: 'PRIMERA EXPERIENCIA' },
 ]
 
 export const skills = [
-  { group: 'FRONTEND', items: ['NextJs', 'HTML', 'AngularJs', 'Bootstrap'] },
-  { group: 'BACKEND', items: ['NodeJs', 'Python', 'MongoDB', 'MySQL'] },
-  { group: 'TOOLS', items: ['Git', 'Figma', 'VS Code', 'Jira'] },
+  { group: 'FRONTEND', items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind CSS'] },
+  { group: 'BACKEND', items: ['Python', 'FastAPI', 'Express', 'APIs REST', 'Spring Boot'] },
+  { group: 'BASES DE DATOS', items: ['MySQL', 'MongoDB'] },
+  { group: 'HERRAMIENTAS', items: ['Git', 'GitHub', 'Bitbucket', 'Vercel', 'Figma'] },
 ]
 
-export const projects = [
+export type Project = {
+  slug: 'licita' | 'barberdeck' | 'nakawe' | 'pladiermo'
+  name: string
+  image: string
+  summary: string
+  overview: string[]
+  role: string
+  tools: string[]
+  demo?: string
+}
+
+export const projects: Project[] = [
   {
+    slug: 'licita',
     name: 'Licita',
     image: '/licitaProject.png',
-    description:
-      'An AI-assisted platform that centralizes public-works tender data and generates economic, technical, and legal proposal documents in one traceable workflow.',
-    tools: ['Next.js', 'FastAPI', 'Supabase', 'Vercel'],
+    summary:
+      'Plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.',
+    overview: [
+      'Licita es una plataforma full stack desarrollada en equipo para centralizar información y estructurar flujos de trabajo de licitaciones de obra pública.',
+      'El proyecto aplica inteligencia artificial en la preparación documental para apoyar la organización de propuestas económicas, técnicas y legales.',
+    ],
+    role: 'Desarrollo Full Stack en equipo.',
+    tools: ['React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'IA'],
     demo: 'https://licitacionfrontend.vercel.app',
   },
   {
-    name: 'Nakawé',
-    image: '/nakaweProject.png',
-    description:
-      'A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.',
-    tools: ['NextJS', 'MySQL'],
-    demo: '#',
+    slug: 'barberdeck',
+    name: 'BarberDeck',
+    image: '/barberdeckProject.png',
+    summary:
+      'Plataforma de automatización para barberías con panel de gestión y asistente de inteligencia artificial integrado a WhatsApp para agenda, recordatorios y seguimiento operativo.',
+    overview: [
+      'BarberDeck es una plataforma de automatización para barberías que combina un panel web de gestión con un asistente de inteligencia artificial integrado a WhatsApp.',
+      'Permite responder consultas, consultar disponibilidad, agendar y reprogramar citas, enviar recordatorios automáticos y facilitar el seguimiento de la operación del negocio.',
+    ],
+    role: 'Desarrollo de producto web y automatización.',
+    tools: ['SaaS', 'IA', 'WhatsApp'],
+    demo: 'https://www.barberdeck.com/',
   },
   {
+    slug: 'nakawe',
+    name: 'Nakawé',
+    image: '/nakaweProject.png',
+    summary:
+      'Plataforma de comercio electrónico desarrollada en equipo para exhibir productos artesanales y facilitar su comercialización a nivel nacional.',
+    overview: [
+      'Participé en el desarrollo frontend de Nakawé, una plataforma web para una fundación mexicana enfocada en la preservación de tradiciones artesanales, sostenibilidad y desarrollo de comunidades.',
+      'El proyecto incluye una experiencia de e-commerce para presentar y comercializar piezas artesanales, junto con funcionalidades para explorar colecciones, productos y el trabajo de las comunidades.',
+      'Mi participación estuvo enfocada en el desarrollo de interfaces y experiencias de usuario para facilitar la conexión entre las piezas artesanales y sus compradores.',
+    ],
+    role: 'Participación en desarrollo frontend, dentro de un equipo de dos personas.',
+    tools: ['E-commerce', 'Desarrollo Full Stack'],
+    demo: 'https://nakawe.vercel.app',
+  },
+  {
+    slug: 'pladiermo',
     name: 'Pladiermo',
     image: '/pladiermoProject.jpeg',
-    description:
-      "A web application designed to streamline the official handover process for the Municipal Comptroller's Office of Morelia.",
-    tools: ['Angular', 'Spring boot', 'MySQL'],
-    demo: '#',
+    summary:
+      'Plataforma Digital de Entrega-Recepción para el Municipio de Morelia. Participé en el desarrollo frontend de interfaces, formularios y recorridos de usuario para digitalizar procesos y actas de entrega-recepción.',
+    overview: [
+      'Pladiermo es una Plataforma Digital de Entrega-Recepción para el Municipio de Morelia.',
+      'Participé en el desarrollo frontend de interfaces, formularios y recorridos de usuario para digitalizar procesos y actas de entrega-recepción.',
+    ],
+    role: 'Participación en desarrollo frontend institucional.',
+    tools: ['Frontend', 'Gobierno digital'],
   },
 ]
 
+export const projectSlugs = projects.map((project) => project.slug)
+
+export function getProjectBySlug(slug: string) {
+  return projects.find((project) => project.slug === slug)
+}
+
 export const experience = [
   {
-    time: 'Nov 2025 — Present',
-    role: 'Junior Full Stack Engineer',
+    time: 'Nov. 2025 — Jun. 2026',
+    role: 'Desarrollador Full Stack',
     company: 'Cumicsa Construcciones S.A. de C.V.',
     description:
-      'Developing an AI-assisted platform that automates public-works tender workflows for construction companies in Mexico.',
-    tools: ['NextJs', 'Supabase', 'FastAPI', 'Vercel'],
+      'Colaboré en un equipo de dos desarrolladores para diseñar y construir una plataforma full stack que digitaliza, centraliza y organiza procesos de licitación de obra pública para empresas constructoras en México.',
+    tools: ['React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'IA'],
   },
   {
-    time: 'Jun 2025 — Nov 2025',
-    role: 'Junior Full Stack Engineer',
-    company: 'Nakawe Foundation',
+    time: 'Jun. 2025 — Nov. 2025',
+    role: 'Desarrollador Full Stack',
+    company: 'Fundación Nakawé',
     description:
-      'Developed an e-commerce platform to improve the visibility of artisan products and facilitate sales across Mexico.',
-    tools: ['NextJs', 'MySQL'],
+      'Desarrollé, junto con un equipo de dos personas, una plataforma de comercio electrónico para exhibir productos artesanales y facilitar su comercialización a nivel nacional.',
+    tools: ['E-commerce', 'Desarrollo Full Stack'],
   },
   {
-    time: 'Mar 2024 — Sep 2024',
-    role: 'Frontend Developer',
-    company: "Municipal Comptroller's Office of Morelia",
+    time: 'Mar. 2024 — Sept. 2024',
+    role: 'Desarrollador Frontend',
+    company: 'Contraloría Municipal de Morelia',
     description:
-      "Contributed to Pladiermo, a platform for managing the municipal administration's official handover process.",
-    tools: ['Angular', 'Spring boot', 'MySQL'],
+      'Participé en el desarrollo de Pladiermo, plataforma institucional para gestionar procesos y actas de entrega-recepción en la administración municipal.',
+    tools: ['Frontend', 'Gobierno digital'],
   },
 ]

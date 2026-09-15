@@ -83,7 +83,7 @@ export default function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
           </span>
-          AVAILABLE FOR WORK
+          DISPONIBLE PARA OPORTUNIDADES
         </span>
         <span className="hidden sm:inline">MORELIA, MÉXICO</span>
       </div>
@@ -111,8 +111,8 @@ export default function Hero() {
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p data-fade className="max-w-lg text-pretty text-sm leading-relaxed text-muted md:text-base">
-            A software engineer passionate about crafting beautiful, accessible, and performant web
-            experiences. I specialize in building pixel-perfect interfaces with modern technologies.
+            Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información.
+            Construyo productos web para los sectores de construcción, comercio electrónico y gobierno.
           </p>
           <div data-fade className="flex shrink-0 gap-3">
             <MagneticButton>
@@ -121,7 +121,7 @@ export default function Hero() {
                 onClick={(e) => go(e, 'projects')}
                 className="group inline-flex items-center gap-2 rounded-full bg-fg px-6 py-3 text-sm font-medium text-bg transition-transform"
               >
-                View My Work
+                Ver proyectos
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             </MagneticButton>
@@ -131,7 +131,7 @@ export default function Hero() {
                 onClick={(e) => go(e, 'contact')}
                 className="inline-flex items-center rounded-full border border-line-strong px-6 py-3 text-sm font-medium transition-colors hover:bg-surface"
               >
-                Get in touch
+                Contactar
               </a>
             </MagneticButton>
           </div>

@@ -1,11 +1,11 @@
-# robots.txt for https://diegopasaye.dev
-# Goal: maximum AI search visibility + standard search indexing.
+# https://diegopasaye.dev
+# Public portfolio: search, retrieval, and AI-training crawlers are allowed.
 
-# --- Standard search engines ---
+# Standard search engines and undisclosed crawlers.
 User-agent: *
 Allow: /
 
-# --- Tier 1 AI search crawlers (highest impact) ---
+# OpenAI: ChatGPT search, training, and user-requested retrieval.
 User-agent: GPTBot
 Allow: /
 
@@ -15,23 +15,31 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic: model training, Claude Search, and user-requested retrieval.
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Claude-SearchBot
 Allow: /
 
+User-agent: Claude-User
+Allow: /
+
+# Perplexity: answer search and user-requested retrieval.
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
 Allow: /
 
-# --- Tier 2 AI crawlers (broader ecosystem) ---
+# Google / Gemini, Apple Intelligence, Amazon, and Meta AI.
 User-agent: Google-Extended
 Allow: /
 
 User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -43,12 +51,11 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-# --- Training-data crawler (allowed for maximum long-term presence) ---
+# Common Crawl is allowed for broad, long-term dataset availability.
 User-agent: CCBot
 Allow: /
 
-# --- Declared AI usage preferences (IETF draft draft-romm-aipref-contentsignals) ---
-# Owner wants to be trained on, searched, and retrieved by AI. See https://contentsignals.org/
+# Optional Content Signals declaration. Crawlers that do not support it ignore it.
 Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes
 
 Sitemap: https://diegopasaye.dev/sitemap.xml

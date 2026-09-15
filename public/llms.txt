@@ -1,34 +1,30 @@
 # Diego Pasaye
 
-> Diego Pasaye is a software-engineering student and junior frontend engineer based in Morelia, Michoacán, México, building accessible, performant web interfaces with React and Next.js.
+> Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán, México. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial para construcción, comercio electrónico, gobierno y servicios.
 
-## About
+## Canonical pages
 
-- [Diego Pasaye — Portfolio](https://diegopasaye.dev): Single-page portfolio covering Diego Pasaye's bio, skills, projects, and work experience as a junior frontend engineer in Morelia, México.
+- [Portfolio](https://diegopasaye.dev): identidad profesional, experiencia, habilidades y contacto.
+- [Licita](https://diegopasaye.dev/licita): caso de estudio de automatización de licitaciones de obra pública con IA, desarrollado en equipo.
+- [BarberDeck](https://diegopasaye.dev/barberdeck): caso de estudio de SaaS para barberías con asistente de IA y WhatsApp.
+- [Nakawé](https://diegopasaye.dev/nakawe): caso de estudio de e-commerce para una fundación mexicana, desarrollado en equipo.
+- [PLADIERMO](https://diegopasaye.dev/pladiermo): caso de estudio de plataforma de entrega-recepción para el Municipio de Morelia.
 
-## Projects
+## Authoritative facts
 
-- [Nakawé](https://diegopasaye.dev/#projects): Web project built in contribution to a foundation supporting artisans (artesanos) of México. Built with React/Next.js by Diego Pasaye.
-- [Pladiermo](https://diegopasaye.dev/#projects): Web development project delivered by Diego Pasaye as part of his professional frontend work.
-
-## Experience
-
-- [Work Experience](https://diegopasaye.dev/#experience): ~4 months developing a web project for the Contraloría Municipal de Morelia, plus ~10 months building a web project with a foundation supporting Mexican artisans. ~8 months total professional experience, ~4 years coding overall.
-
-## Key Facts
-
-- Name: Diego Pasaye
-- Role: Software-engineering student and junior frontend engineer
-- Location: Morelia, Michoacán, México
-- Education: Universidad Tecnológica de Morelia (TI / Tecnologías de la Información)
-- Experience: ~4 years coding, ~8 months professional
-- Core skills: HTML, CSS, JavaScript, TypeScript, React, Next.js
-- Notable projects: Nakawé (artisan foundation), Pladiermo
-- Available for: junior frontend / web development roles
+- Rol: Desarrollador Full Stack.
+- Stack principal: React, Next.js, TypeScript, Python, FastAPI, APIs REST, MySQL, MongoDB, inteligencia artificial y automatización de procesos.
+- Educación: Ingeniería en Tecnologías de la Información, Universidad Tecnológica de Morelia (2022–2026).
+- Experiencia: desarrollo frontend para gobierno y desarrollo full stack para comercio electrónico y automatización de licitaciones.
+- Idioma: inglés con competencia básica profesional.
+- Disponible para: oportunidades Full Stack en México y equipos remotos internacionales.
 
 ## Contact
 
-- Website: https://diegopasaye.dev
+- [LinkedIn](https://www.linkedin.com/in/diegopasaye)
+- [GitHub](https://github.com/DiegoPasaye)
 - Email: pasayealvarado@gmail.com
-- GitHub: https://github.com/DiegoPasaye
-- LinkedIn: https://www.linkedin.com/in/diegopasaye
+
+## More detail
+
+- [Perfil completo para asistentes de IA](https://diegopasaye.dev/llms-full.txt)

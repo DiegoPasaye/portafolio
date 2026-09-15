@@ -6,7 +6,10 @@
 // @graph combines Person (priority entity) + WebSite + ProfilePage and cross-links
 // them by @id. Replace IMAGE placeholders once a real profile photo / OG image exists.
 
-const SITE = 'https://diegopasaye.dev'
+import { serializeJsonLd } from '../lib/jsonld'
+import { SITE_URL } from '../site'
+
+const SITE = SITE_URL
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -19,9 +22,9 @@ const jsonLd = {
       familyName: 'Pasaye',
       url: SITE,
       // image: add once a real hosted headshot exists in /public (boosts knowledge-panel eligibility).
-      jobTitle: 'Junior Full Stack Engineer',
+      jobTitle: 'Desarrollador Full Stack',
       description:
-        'Software-engineering student and junior full stack engineer based in Morelia, México, building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
+        'Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información, con experiencia en productos web para construcción, comercio electrónico y gobierno.',
       email: 'mailto:pasayealvarado@gmail.com',
       knowsLanguage: ['es-MX', 'en'],
       address: {
@@ -49,7 +52,6 @@ const jsonLd = {
         'Frontend Development',
         'Next.js',
         'React',
-        'Angular',
         'JavaScript',
         'TypeScript',
         'HTML',
@@ -57,12 +59,11 @@ const jsonLd = {
         'Node.js',
         'Python',
         'FastAPI',
-        'Supabase',
         'MySQL',
         'MongoDB',
         'Vercel',
-        'UI/UX Design',
-        'Web Accessibility',
+        'Artificial Intelligence',
+        'Process Automation',
       ],
       sameAs: [
         'https://github.com/DiegoPasaye',
@@ -76,8 +77,8 @@ const jsonLd = {
       alternateName: 'Diego Pasaye',
       url: SITE,
       description:
-        "Single-page portfolio covering Diego Pasaye's bio, skills, projects, and work experience as a junior full stack engineer in Morelia, México.",
-      inLanguage: 'en',
+        'Portafolio de Diego Pasaye, Desarrollador Full Stack en Morelia, Michoacán, con experiencia en productos web para construcción, comercio electrónico y gobierno.',
+      inLanguage: 'es-MX',
       publisher: { '@id': `${SITE}/#person` },
       author: { '@id': `${SITE}/#person` },
     },
@@ -85,11 +86,11 @@ const jsonLd = {
       '@type': 'ProfilePage',
       '@id': `${SITE}/#profilepage`,
       url: SITE,
-      name: 'Diego Pasaye — Software Engineer',
+      name: 'Diego Pasaye — Desarrollador Full Stack',
       isPartOf: { '@id': `${SITE}/#website` },
       about: { '@id': `${SITE}/#person` },
       mainEntity: { '@id': `${SITE}/#person` },
-      inLanguage: 'en',
+      inLanguage: 'es-MX',
       // Marks the most quotable, self-contained sections for AI assistants / voice.
       speakable: {
         '@type': 'SpeakableSpecification',
@@ -99,28 +100,35 @@ const jsonLd = {
         {
           '@type': 'SoftwareApplication',
           name: 'Licita',
-          url: 'https://licitacionfrontend.vercel.app',
+          url: `${SITE}/licita`,
           description:
-            'An AI-assisted platform that centralizes public-works tender data and generates economic, technical, and legal proposal documents in one traceable workflow.',
+            'Plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.',
           applicationCategory: 'BusinessApplication',
           author: { '@id': `${SITE}/#person` },
         },
         {
           '@type': 'SoftwareSourceCode',
           name: 'Nakawé',
-          url: `${SITE}/#projects`,
+          url: `${SITE}/nakawe`,
           description:
-            'A full-stack e-commerce solution with real-time inventory management, payment processing, and an admin dashboard, built in contribution to a foundation supporting Mexican artisans.',
-          programmingLanguage: ['Next.js', 'MySQL'],
+            'Plataforma de comercio electrónico desarrollada en equipo para exhibir productos artesanales y facilitar su comercialización a nivel nacional.',
           author: { '@id': `${SITE}/#person` },
         },
         {
           '@type': 'SoftwareSourceCode',
           name: 'Pladiermo',
-          url: `${SITE}/#projects`,
+          url: `${SITE}/pladiermo`,
           description:
-            "A web application that streamlines the official delivery-reception (handover) process for the Municipal Comptroller's Office of Morelia (Contraloría Municipal de Morelia).",
-          programmingLanguage: ['Angular', 'Spring Boot', 'MySQL'],
+            'Plataforma Digital de Entrega-Recepción para el Municipio de Morelia; Diego participó en el desarrollo frontend de interfaces, formularios y recorridos de usuario.',
+          author: { '@id': `${SITE}/#person` },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          name: 'BarberDeck',
+          url: `${SITE}/barberdeck`,
+          description:
+            'Plataforma de automatización para barberías con un panel web de gestión y un asistente de inteligencia artificial integrado a WhatsApp.',
+          applicationCategory: 'BusinessApplication',
           author: { '@id': `${SITE}/#person` },
         },
       ],
@@ -132,23 +140,23 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Who is Diego Pasaye?',
+          name: '¿Quién es Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Diego Pasaye is a junior full stack engineer and software-engineering student at the Universidad Tecnológica de Morelia, in Morelia, México. He builds accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
+            text: 'Diego Pasaye es Desarrollador Full Stack y recién egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What does Diego Pasaye build?',
+          name: '¿Qué productos desarrolla Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Full-stack and frontend web apps — including Licita, an AI-assisted public-works tender platform; Nakawé, a Next.js and MySQL e-commerce platform supporting Mexican artisans; and Pladiermo, an Angular and Spring Boot handover application for the Municipal Comptroller’s Office of Morelia.',
+            text: 'Desarrolla productos web full stack y frontend para construcción, comercio electrónico, gobierno y servicios; entre ellos Licita, BarberDeck, Nakawé y Pladiermo.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How can I contact Diego Pasaye?',
+          name: '¿Cómo puedo contactar a Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'By email at pasayealvarado@gmail.com, on GitHub at github.com/DiegoPasaye, or on LinkedIn at linkedin.com/in/diegopasaye.',
@@ -163,8 +171,7 @@ export default function JsonLd() {
   return (
     <script
       type="application/ld+json"
-      // Static, author-controlled object — safe to inline.
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
     />
   )
 }

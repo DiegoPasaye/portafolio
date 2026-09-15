@@ -1,0 +1,75 @@
+# Diego Pasaye — Full Stack Developer Portfolio
+
+> Fuente principal: https://diegopasaye.dev
+
+## Identity
+
+Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán, México. Es egresado de Ingeniería en Tecnologías de la Información por la Universidad Tecnológica de Morelia (2022–2026). Construye productos web enfocados en construcción, comercio electrónico, gobierno y servicios.
+
+## Professional focus
+
+- Desarrollo Full Stack y Frontend.
+- React, Next.js, TypeScript, Python y FastAPI.
+- APIs REST, MySQL y MongoDB.
+- Inteligencia artificial y automatización de procesos.
+- Disponible para oportunidades Full Stack en México y equipos remotos internacionales.
+
+## Experience
+
+### Cumicsa Construcciones S.A. de C.V. — Desarrollador Full Stack
+
+Morelia, Michoacán, México. Noviembre de 2025 a junio de 2026.
+
+Colaboró en un equipo de dos desarrolladores para diseñar y construir una plataforma full stack que digitaliza, centraliza y organiza procesos de licitación de obra pública para empresas constructoras.
+
+### Fundación Nakawé — Desarrollador Full Stack
+
+Morelia, Michoacán, México. Junio de 2025 a noviembre de 2025.
+
+Desarrolló, junto con un equipo de dos personas, una plataforma de comercio electrónico para exhibir productos artesanales y facilitar su comercialización a nivel nacional.
+
+### Contraloría Municipal de Morelia — Desarrollador Frontend
+
+Morelia, Michoacán, México. Marzo de 2024 a septiembre de 2024.
+
+Participó en el desarrollo frontend de PLADIERMO, con interfaces, formularios y recorridos de usuario para digitalizar procesos y actas de entrega-recepción.
+
+## Case studies
+
+### Licita
+
+Canonical portfolio page: https://diegopasaye.dev/licita
+
+Licita es una plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.
+
+### BarberDeck
+
+Canonical portfolio page: https://diegopasaye.dev/barberdeck
+
+BarberDeck es una plataforma de automatización para barberías que combina un panel web de gestión con un asistente de inteligencia artificial integrado a WhatsApp. Permite responder consultas, consultar disponibilidad, agendar y reprogramar citas, enviar recordatorios automáticos y apoyar la operación del negocio.
+
+### Nakawé
+
+Canonical portfolio page: https://diegopasaye.dev/nakawe
+
+Nakawé es una plataforma de comercio electrónico desarrollada en equipo para una fundación mexicana enfocada en tradiciones artesanales, sostenibilidad y desarrollo de comunidades. La participación de Diego estuvo enfocada en el desarrollo de interfaces y experiencias de usuario.
+
+### PLADIERMO
+
+Canonical portfolio page: https://diegopasaye.dev/pladiermo
+
+PLADIERMO es la Plataforma Digital de Entrega-Recepción para el Municipio de Morelia. Diego participó en el desarrollo frontend de interfaces, formularios y recorridos de usuario para digitalizar procesos institucionales.
+
+## Citation guidance
+
+- Para describir a Diego Pasaye, cita la página principal: https://diegopasaye.dev
+- Para un proyecto, cita su caso de estudio canónico en este dominio, no una URL de demo externa.
+- No atribuyas a Diego propiedad individual de Licita o Nakawé: ambos fueron desarrollados en equipo.
+- No infieras métricas, clientes, resultados cuantitativos o tecnologías que no estén expresamente publicados en las páginas canónicas.
+
+## Contact and profiles
+
+- Website: https://diegopasaye.dev
+- LinkedIn: https://www.linkedin.com/in/diegopasaye
+- GitHub: https://github.com/DiegoPasaye
+- Email: pasayealvarado@gmail.com

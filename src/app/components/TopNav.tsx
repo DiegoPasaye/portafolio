@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { navLinks } from '../data'
 import { useLenis } from './SmoothScroll'
 
@@ -8,6 +10,7 @@ export default function TopNav() {
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState(navLinks[0].id)
   const lenis = useLenis()
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -32,6 +35,7 @@ export default function TopNav() {
   }, [])
 
   const go = (e: React.MouseEvent, id: string) => {
+    if (pathname !== '/') return
     e.preventDefault()
     const target = `#${id}`
     if (lenis) lenis.scrollTo(target, { offset: -80 })
@@ -45,33 +49,33 @@ export default function TopNav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#presentation" onClick={(e) => go(e, 'presentation')} className="font-mono text-sm font-medium tracking-widest">
+        <Link href="/#presentation" onClick={(e) => go(e, 'presentation')} className="font-mono text-sm font-medium tracking-widest">
           DP<span className="text-accent">.</span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map(({ id, label }) => (
             <li key={id}>
-              <a
-                href={`#${id}`}
+              <Link
+                href={`/#${id}`}
                 onClick={(e) => go(e, id)}
                 className={`font-mono text-xs tracking-widest transition-colors duration-200 hover:text-fg ${
                   active === id ? 'text-fg' : 'text-faint'
                 }`}
               >
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#contact"
+        <Link
+          href="/#contact"
           onClick={(e) => go(e, 'contact')}
           className="font-mono text-xs tracking-widest text-faint transition-colors hover:text-fg md:hidden"
         >
           MENU↓
-        </a>
+        </Link>
       </nav>
     </header>
   )

@@ -6,22 +6,24 @@ import SmoothScroll from './components/SmoothScroll'
 import CustomCursor from './components/CustomCursor'
 import TopNav from './components/TopNav'
 import JsonLd from './components/JsonLd'
+import { SITE_URL } from './site'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://diegopasaye.dev'),
-  title: 'Diego Pasaye — Software Engineer',
+  metadataBase: new URL(SITE_URL),
+  title: 'Diego Pasaye — Desarrollador Full Stack',
   description:
-    'Diego Pasaye is a junior full stack engineer and software-engineering student in Morelia, México, building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
+    'Diego Pasaye es Desarrollador Full Stack en Morelia, Michoacán. Construye productos web con React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
   keywords: [
     'Diego Pasaye',
     'Diego Pasaye developer',
-    'full stack engineer',
-    'frontend engineer',
-    'software engineer',
-    'React developer',
-    'Next.js developer',
-    'FastAPI developer',
-    'Supabase developer',
+    'desarrollador full stack',
+    'desarrollador frontend',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Python',
+    'FastAPI',
+    'inteligencia artificial',
     'Morelia',
     'México',
     'web developer portfolio',
@@ -30,18 +32,18 @@ export const metadata: Metadata = {
   creator: 'Diego Pasaye',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Diego Pasaye — Software Engineer',
+    title: 'Diego Pasaye — Desarrollador Full Stack',
     description:
-      'Junior full stack engineer in Morelia, México — building accessible, performant web applications with React, Next.js, FastAPI, and Supabase.',
+      'Desarrollador Full Stack en Morelia, Michoacán. React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
     url: 'https://diegopasaye.dev',
     siteName: 'Diego Pasaye',
-    locale: 'en_US',
+    locale: 'es_MX',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diego Pasaye — Software Engineer',
-    description: 'Junior full stack engineer in Morelia, México — React, Next.js, FastAPI & Supabase.',
+    title: 'Diego Pasaye — Desarrollador Full Stack',
+    description: 'React, Next.js, TypeScript, Python, FastAPI e inteligencia artificial.',
   },
   robots: {
     index: true,
@@ -62,7 +64,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="es-MX" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body>
         <JsonLd />
         <SmoothScroll>

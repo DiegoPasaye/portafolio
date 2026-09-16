@@ -5,10 +5,15 @@
 ## Canonical pages
 
 - [Portfolio](https://diegopasaye.dev): identidad profesional, experiencia, habilidades y contacto.
+- [Todos los proyectos](https://diegopasaye.dev/proyectos): catálogo de casos de estudio destacados de Diego Pasaye.
 - [Licita](https://diegopasaye.dev/licita): caso de estudio de automatización de licitaciones de obra pública con IA, desarrollado en equipo.
 - [BarberDeck](https://diegopasaye.dev/barberdeck): caso de estudio de SaaS para barberías con asistente de IA y WhatsApp.
 - [Nakawé](https://diegopasaye.dev/nakawe): caso de estudio de e-commerce para una fundación mexicana, desarrollado en equipo.
 - [PLADIERMO](https://diegopasaye.dev/pladiermo): caso de estudio de plataforma de entrega-recepción para el Municipio de Morelia.
+- [CUMICSA](https://diegopasaye.dev/cumicsa): caso de estudio de desarrollo Full Stack corporativo para construcción e infraestructura en Morelia.
+- [MIA Bistro Caffé](https://diegopasaye.dev/mia-bistro): caso de estudio de desarrollo Full Stack gastronómico con menú, reservaciones, horario y ubicación.
+- [NoMaTech](https://diegopasaye.dev/nomatech): caso de estudio de desarrollo Full Stack corporativo para software a medida, IA y automatización.
+- [Bot probabilístico de Polymarket](https://diegopasaye.dev/polymarket-bot): caso técnico de investigación cuantitativa en Python para mercados de Ethereum de cinco minutos.
 
 ## Authoritative facts
 
@@ -17,6 +22,7 @@
 - Educación: Ingeniería en Tecnologías de la Información, Universidad Tecnológica de Morelia (2022–2026).
 - Experiencia: desarrollo frontend para gobierno y desarrollo full stack para comercio electrónico y automatización de licitaciones.
 - Trayectoria: más de 18 meses de experiencia profesional entre gobierno, comercio electrónico y construcción.
+- Investigación técnica: sistema en Python con datos en tiempo real, modelos probabilísticos, ejecución maker, backtesting y simulaciones Monte Carlo para mercados de predicción. Está en I+D; no representa una promesa de rentabilidad.
 - Idioma: inglés con competencia básica profesional.
 - Disponible para: oportunidades Full Stack en México y equipos remotos internacionales.
 

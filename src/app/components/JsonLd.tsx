@@ -64,6 +64,9 @@ const jsonLd = {
         'Vercel',
         'Artificial Intelligence',
         'Process Automation',
+        'Quantitative Research',
+        'Probabilistic Modeling',
+        'Asynchronous Systems',
       ],
       sameAs: [
         'https://github.com/DiegoPasaye',
@@ -131,6 +134,39 @@ const jsonLd = {
           applicationCategory: 'BusinessApplication',
           author: { '@id': `${SITE}/#person` },
         },
+        {
+          '@type': 'SoftwareSourceCode',
+          name: 'Polymarket Probability Research Bot',
+          url: `${SITE}/polymarket-bot`,
+          description:
+            'Sistema en Python para investigar mercados de Ethereum de cinco minutos con datos en tiempo real, modelos probabilísticos, ejecución maker, backtesting y simulaciones Monte Carlo.',
+          programmingLanguage: 'Python',
+          author: { '@id': `${SITE}/#person` },
+        },
+        {
+          '@type': 'CreativeWork',
+          name: 'CUMICSA',
+          url: `${SITE}/cumicsa`,
+          description:
+            'Sitio corporativo para una empresa de construcción e infraestructura en Morelia; Diego Pasaye participó en el desarrollo Full Stack.',
+          author: { '@id': `${SITE}/#person` },
+        },
+        {
+          '@type': 'CreativeWork',
+          name: 'MIA Bistro Caffé',
+          url: `${SITE}/mia-bistro`,
+          description:
+            'Sitio web para un bistró mediterráneo en Morelia, con información de menú, reservaciones, horario y ubicación; Diego Pasaye participó en el desarrollo Full Stack.',
+          author: { '@id': `${SITE}/#person` },
+        },
+        {
+          '@type': 'CreativeWork',
+          name: 'NoMaTech',
+          url: `${SITE}/nomatech`,
+          description:
+            'Sitio corporativo para una firma de software a medida, inteligencia artificial y automatización en Morelia; Diego Pasaye participó en el desarrollo Full Stack.',
+          author: { '@id': `${SITE}/#person` },
+        },
       ],
     },
     {
@@ -151,7 +187,7 @@ const jsonLd = {
           name: '¿Qué productos desarrolla Diego Pasaye?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Desarrolla productos web full stack y frontend para construcción, comercio electrónico, gobierno y servicios; entre ellos Licita, BarberDeck, Nakawé y Pladiermo.',
+            text: 'Desarrolla productos web full stack y frontend para construcción, comercio electrónico, gobierno y servicios; entre ellos Licita, BarberDeck, Nakawé y PLADIERMO. También desarrolla sistemas de investigación cuantitativa en Python.',
           },
         },
         {

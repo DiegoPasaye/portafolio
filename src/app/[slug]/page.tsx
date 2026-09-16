@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         mainEntity: { '@id': `${canonicalUrl}#project` },
       },
       {
-        '@type': 'CreativeWork',
+        '@type': project.slug === 'polymarket-bot' ? 'SoftwareSourceCode' : 'CreativeWork',
         '@id': `${canonicalUrl}#project`,
         url: canonicalUrl,
         name: project.name,
@@ -77,6 +77,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         inLanguage: 'es-MX',
         author: { '@id': `${SITE_URL}/#person` },
         mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+        ...(project.slug === 'polymarket-bot' ? { programmingLanguage: 'Python' } : {}),
       },
       {
         '@type': 'BreadcrumbList',
@@ -92,7 +93,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             '@type': 'ListItem',
             position: 2,
             name: 'Proyectos',
-            item: `${SITE_URL}/#projects`,
+            item: `${SITE_URL}/proyectos`,
           },
           {
             '@type': 'ListItem',
@@ -124,7 +125,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(projectJsonLd) }}
       />
       <Link
-        href="/#projects"
+        href="/proyectos"
         className="inline-flex items-center gap-2 font-mono text-xs tracking-widest text-faint transition-colors hover:text-fg"
       >
         <span>←</span>
@@ -136,7 +137,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           INICIO
         </Link>
         <span aria-hidden="true">/</span>
-        <Link href="/#projects" className="hover:text-fg">
+        <Link href="/proyectos" className="hover:text-fg">
           PROYECTOS
         </Link>
         <span aria-hidden="true">/</span>
@@ -145,9 +146,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </span>
       </nav>
 
-      <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-20">
-        <div className="overflow-hidden rounded-2xl border border-line bg-surface">
-          <div className="relative aspect-[4/3]">
+      <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch lg:gap-20">
+        <div className="overflow-hidden rounded-2xl border border-line bg-surface lg:self-stretch">
+          <div className="relative aspect-[4/3] lg:h-full lg:min-h-[38rem] lg:aspect-auto">
             <Image
               src={project.image}
               alt={`Vista previa del proyecto ${project.name}`}

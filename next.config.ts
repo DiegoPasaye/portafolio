@@ -14,6 +14,15 @@ const csp = [
 ].join('; ')
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/proyectos/:slug',
+        destination: '/:slug',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

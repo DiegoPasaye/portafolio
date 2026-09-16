@@ -33,6 +33,11 @@ const jsonLd = {
         addressRegion: 'Michoacán',
         addressCountry: 'MX',
       },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 19.706,
+        longitude: -101.195,
+      },
       alumniOf: {
         '@type': 'CollegeOrUniversity',
         name: 'Universidad Tecnológica de Morelia',
@@ -50,6 +55,11 @@ const jsonLd = {
       knowsAbout: [
         'Full Stack Development',
         'Frontend Development',
+        'Automatización de licitaciones',
+        'Licitaciones de obra pública',
+        'Software para licitaciones',
+        'Análisis de precios unitarios',
+        'FASAR',
         'Next.js',
         'React',
         'JavaScript',
@@ -72,6 +82,35 @@ const jsonLd = {
         'https://github.com/DiegoPasaye',
         'https://www.linkedin.com/in/diegopasaye/',
       ],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE}/#service`,
+      name: 'Diego Pasaye — Desarrollo de Software',
+      url: SITE,
+      description:
+        'Servicios de desarrollo de software full stack, automatización de procesos de licitación y plataformas web en Morelia, Michoacán.',
+      areaServed: {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: 19.706,
+          longitude: -101.195,
+        },
+        geoRadius: '50000',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 19.706,
+        longitude: -101.195,
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Morelia',
+        addressRegion: 'Michoacán',
+        addressCountry: 'MX',
+      },
+      provider: { '@id': `${SITE}/#person` },
     },
     {
       '@type': 'WebSite',
@@ -103,10 +142,14 @@ const jsonLd = {
         {
           '@type': 'SoftwareApplication',
           name: 'Licita',
+          alternateName: 'Licita por Nomatech',
           url: `${SITE}/licita`,
           description:
-            'Plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.',
+            'Software para automatizar licitaciones de obra pública en México, análisis de precios unitarios (APU), FASAR y preparación documental técnica y legal.',
           applicationCategory: 'BusinessApplication',
+          applicationSubCategory:
+            'Software de preparación y automatización documental de licitaciones de obra pública',
+          operatingSystem: 'Web',
           author: { '@id': `${SITE}/#person` },
         },
         {

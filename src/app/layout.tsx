@@ -56,6 +56,13 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
+  other: {
+    'geo.region': 'MX-MIC',
+    'geo.placename': 'Morelia, Michoacán',
+    'geo.position': '19.7060;-101.1950',
+    ICBM: '19.7060, -101.1950',
+    'content-language': 'es-MX',
+  },
 }
 
 export const viewport: Viewport = {

@@ -45,17 +45,28 @@ export type ProjectSlug =
   | 'nomatech'
   | 'polymarket-bot'
 
+export type ProjectSection = {
+  title: string
+  items?: Array<{ heading: string; description: string }>
+  paragraphs?: string[]
+}
+
 export type Project = {
   slug: ProjectSlug
   name: string
+  headline?: string
   image: string
   summary: string
   seoTitle: string
   seoDescription: string
   keyPhrases: string[]
   overview: string[]
+  sections?: ProjectSection[]
   role: string
+  roleDetails?: string[]
   tools: string[]
+  applicationSubCategory?: string
+  features?: string[]
   faqs: Array<{ question: string; answer: string }>
   demo?: string
 }
@@ -64,38 +75,151 @@ export const projects: Project[] = [
   {
     slug: 'licita',
     name: 'Licita',
+    headline: 'Automatización de licitaciones públicas',
     image: '/licitaProject.png',
     summary:
-      'Plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.',
-    seoTitle: 'Licita: automatización de licitaciones con IA | Diego Pasaye',
+      'Plataforma y software de automatización para preparar licitaciones de obra pública en México, estructurando documentos económicos, técnicos y legales en un flujo ágil y auditable.',
+    seoTitle: 'Licita | Automatización de licitaciones públicas | Diego Pasaye',
     seoDescription:
-      'Caso de estudio de Licita: plataforma desarrollada en equipo para automatizar y organizar la preparación documental de licitaciones de obra pública con inteligencia artificial.',
+      'Caso de estudio de Licita: software para automatizar licitaciones de obra pública en México, análisis de precios unitarios (APU), FASAR y preparación documental técnica y legal.',
     keyPhrases: [
       'automatización de licitaciones',
+      'software para licitaciones',
       'licitaciones de obra pública',
-      'inteligencia artificial para licitaciones',
+      'automatización de licitaciones públicas',
+      'análisis de precios unitarios',
+      'FASAR y costos horarios',
       'preparación documental de licitaciones',
+      'Compras MX licitaciones',
+    ],
+    applicationSubCategory:
+      'Software de preparación y automatización documental de licitaciones de obra pública',
+    features: [
+      'Económico: Análisis de precios unitarios (APU), cálculo de FASAR, costos horarios de maquinaria, costos indirectos, financiamiento, utilidad y presupuesto general de obra.',
+      'Técnico: Planeación de obra, programas calendarizados de personal y maquinaria, acreditación de experiencia técnica y relación de contratos.',
+      'Legal: Centralización de actas constitutivas, poderes notariales, constancias de situación fiscal y convenios de participación conjunta.',
+      'Carga y OCR: Extracción estructurada de convocatorias, bases de licitación y catálogos de conceptos con Azure Document Intelligence.',
+      'Estructuración: Normalización de datos en esquemas estructurados para evitar la doble captura y mantener trazabilidad.',
+      'Prepara: Generación programática de anexos oficiales en formatos PDF y hojas de cálculo Excel por código.',
+      'Valida: Sistema de revisión previa con la regla central: la automatización prepara, el equipo profesional valida.',
     ],
     overview: [
-      'Licita es una plataforma full stack desarrollada en equipo para centralizar información y estructurar flujos de trabajo de licitaciones de obra pública.',
-      'El proyecto aplica inteligencia artificial en la preparación documental para apoyar la organización de propuestas económicas, técnicas y legales.',
+      'Licita es una plataforma y solución de software diseñada para digitalizar, centralizar y automatizar la preparación documental de licitaciones de obra pública en México.',
+      'En el sector de la construcción e infraestructura pública, preparar una propuesta para convocatorias de dependencias oficiales exige coordinar expedientes de cientos de páginas, múltiples anexos técnicos, económicos y legales con plazos estrictos y un margen de error nulo. Un anexo incompleto o un fallo en los formatos oficiales implica la descalificación inmediata en Compras MX.',
+      'Licita transforma el proceso tradicional manual en un flujo estructurado y trazable que reduce tareas repetitivas de captura, garantiza consistencia matemática en los cálculos y permite al equipo enfocarse en la revisión estratégica antes de presentar la oferta.',
     ],
-    role: 'Desarrollo Full Stack en equipo.',
-    tools: ['React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'IA'],
-    faqs: [
+    sections: [
       {
-        question: '¿Qué es Licita?',
-        answer:
-          'Licita es una plataforma full stack desarrollada en equipo para centralizar información y estructurar flujos de trabajo de licitaciones de obra pública.',
+        title: 'Módulos principales del sistema',
+        items: [
+          {
+            heading: 'Módulo Económico',
+            description:
+              'Automatización y estructuración de análisis de precios unitarios (APU), cálculo de Factor de Salario Real (FASAR), costos horarios de maquinaria y equipo, factores de sobrecosto (indirectos, financiamiento y utilidad) y presupuesto maestro de obra.',
+          },
+          {
+            heading: 'Módulo Técnico',
+            description:
+              'Organización de programas calendarizados de ejecución de obra, programas de utilización de personal y maquinaria, acreditación de experiencia técnica del personal propuesto y relación de contratos en vigor.',
+          },
+          {
+            heading: 'Módulo Legal y Administrativo',
+            description:
+              'Centralización de datos corporativos de la empresa constructora, actas constitutivas, poderes notariales, constancias fiscales, cartas de compromiso y anexos de participación conjunta.',
+          },
+        ],
       },
       {
-        question: '¿Qué procesos apoya Licita?',
+        title: 'Flujo de automatización documental (Pipeline)',
+        items: [
+          {
+            heading: '1. Carga y OCR Inteligente',
+            description:
+              'Extracción automatizada de convocatorias, bases y catálogos extensos mediante Azure Document Intelligence, reconociendo partidas, unidades y especificaciones técnicas.',
+          },
+          {
+            heading: '2. Normalización de Datos',
+            description:
+              'Estructuración de conceptos en bases de datos relacionales para mantener la trazabilidad entre el catálogo general y cada anexo particular.',
+          },
+          {
+            heading: '3. Generación Programática',
+            description:
+              'Construcción de entregables y formatos oficiales en Excel y PDF directamente por código, eliminando discrepancias de redondeo y formatos manuales corruptos.',
+          },
+          {
+            heading: '4. Validación Humana Obligatoria',
+            description:
+              'La plataforma propone y el equipo profesional decide. Todo cálculo, fórmula y entregable cuenta con estados de comprobación obligatorios antes de su exportación definitiva.',
+          },
+        ],
+      },
+      {
+        title: 'Compatibilidad y normatividad en México',
+        paragraphs: [
+          'Licita está adaptada a los requerimientos de la Ley de Obras Públicas y Servicios Relacionados con las Mismas en México y contempla lineamientos de dependencias gubernamentales federales y estatales como CONAGUA, CAPUFE, SICT, SEDATU, CFE e IMSS.',
+          'Las plantillas y estructuras documentales aseguran coherencia con los formatos exigidos en las licitaciones públicas y licitaciones simplificadas presentadas a través de Compras MX.',
+        ],
+      },
+      {
+        title: 'Arquitectura técnica e ingeniería',
+        items: [
+          {
+            heading: 'Frontend Interactivo (Next.js & TypeScript)',
+            description:
+              'Interfaz responsiva y de alta densidad de información construida con React, Next.js y TypeScript para visualización y edición fluida de catálogos con cientos de partidas.',
+          },
+          {
+            heading: 'Backend y Orquestación (Python & FastAPI)',
+            description:
+              'Servicios backend en Python y FastAPI con SQLAlchemy, preparados para procesamiento numérico pesado, generación de matrices y extracción de texto.',
+          },
+          {
+            heading: 'Tiempo Real con WebSockets',
+            description:
+              'Canales de comunicación en tiempo real que informan al usuario sobre el progreso de procesamiento y análisis de documentos voluminosos sin congelar la interfaz.',
+          },
+        ],
+      },
+    ],
+    role: 'Desarrollo Full Stack en equipo (junto a Carlos Guijosa en Nomatech).',
+    roleDetails: [
+      'Co-diseño y arquitectura de la solución full-stack y modelo de datos para expedientes de licitación.',
+      'Desarrollo frontend en React, Next.js y TypeScript para la navegación interactiva de expedientes, matrices de precios y control de estados.',
+      'Implementación e integración de endpoints en FastAPI para la manipulación y extracción de datos de licitaciones.',
+      'Optimización del rendimiento de la interfaz para manejar grandes volúmenes de partidas sin pérdida de fluidez.',
+    ],
+    tools: ['React', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Azure OCR', 'WebSockets', 'IA'],
+    faqs: [
+      {
+        question: '¿Qué es Licita y para qué sirve?',
         answer:
-          'El proyecto aplica inteligencia artificial en la preparación documental para apoyar la organización de propuestas económicas, técnicas y legales.',
+          'Licita es una plataforma de software diseñada para centralizar, estructurar y automatizar la preparación documental de licitaciones de obra pública en México, abarcando propuestas económicas, técnicas y legales.',
+      },
+      {
+        question: '¿Licita reemplaza a los analistas de precios unitarios o al equipo técnico?',
+        answer:
+          'No. La regla central de Licita es que la automatización prepara y el equipo profesional valida. El software elimina la fricción operativa y los errores de transcripción manual, pero cada cálculo y entregable requiere comprobación humana.',
+      },
+      {
+        question: '¿Qué dependencias públicas y modalidades contempla el software?',
+        answer:
+          'Está preparado para modalidades a precio unitario, precio alzado y mixtas, con plantillas adaptadas para dependencias mexicanas como CONAGUA, CAPUFE, SICT, SEDATU, CFE e IMSS.',
+      },
+      {
+        question: '¿Cómo apoya la automatización en el análisis de precios unitarios y FASAR?',
+        answer:
+          'El módulo económico centraliza insumos, costos horarios de maquinaria, factores de salario real (FASAR) y porcentajes de sobrecosto (indirectos, financiamiento y utilidad), propagando cualquier ajuste a todos los anexos del presupuesto de forma automática.',
+      },
+      {
+        question: '¿Qué tecnologías se utilizaron en el desarrollo de Licita?',
+        answer:
+          'El stack de ingeniería incluye Next.js, React, TypeScript, Python, FastAPI, SQLAlchemy, Azure Document Intelligence para OCR y WebSockets para actualización de progreso en tiempo real.',
       },
       {
         question: '¿Cuál fue la participación de Diego Pasaye en Licita?',
-        answer: 'Diego Pasaye participó en el desarrollo Full Stack dentro de un equipo.',
+        answer:
+          'Diego Pasaye participó como desarrollador Full Stack en un equipo de dos ingenieros (junto a Carlos Guijosa en Nomatech), desarrollando las interfaces web interactivas, la integración de APIs en FastAPI y la optimización del flujo documental.',
       },
     ],
     demo: 'https://licitacionfrontend.vercel.app',

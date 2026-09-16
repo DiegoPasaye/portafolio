@@ -6,7 +6,7 @@
 
 - [Portfolio](https://diegopasaye.dev): identidad profesional, experiencia, habilidades y contacto.
 - [Todos los proyectos](https://diegopasaye.dev/proyectos): catálogo de casos de estudio destacados de Diego Pasaye.
-- [Licita](https://diegopasaye.dev/licita): caso de estudio de automatización de licitaciones de obra pública con IA, desarrollado en equipo.
+- [Licita](https://diegopasaye.dev/licita): caso de estudio de automatización de licitaciones públicas de obra pública en México, estructuración de propuestas económicas (APU, FASAR), técnicas y legales.
 - [BarberDeck](https://diegopasaye.dev/barberdeck): caso de estudio de SaaS para barberías con asistente de IA y WhatsApp.
 - [Nakawé](https://diegopasaye.dev/nakawe): caso de estudio de e-commerce para una fundación mexicana, desarrollado en equipo.
 - [PLADIERMO](https://diegopasaye.dev/pladiermo): caso de estudio de plataforma de entrega-recepción para el Municipio de Morelia.

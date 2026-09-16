@@ -41,8 +41,9 @@ Catálogo de casos de estudio: https://diegopasaye.dev/proyectos
 ### Licita
 
 Canonical portfolio page: https://diegopasaye.dev/licita
-
-Licita es una plataforma full stack desarrollada en equipo para centralizar información, estructurar flujos de trabajo y aplicar inteligencia artificial en la preparación documental de licitaciones de obra pública.
+Short summary: Licita es una plataforma y software de automatización para preparar licitaciones de obra pública en México, estructurando documentos económicos (análisis de precios unitarios, FASAR, costos horarios, indirectos), técnicos y legales.
+Technologies: React, Next.js, TypeScript, Python, FastAPI, SQLAlchemy, Azure Document Intelligence (OCR), WebSockets.
+Role: Diego Pasaye colaboró como Desarrollador Full Stack en un equipo de dos ingenieros (junto a Carlos Guijosa en Nomatech), desarrollando interfaces web interactivas, integración de APIs y optimización del flujo documental.
 
 ### BarberDeck
 

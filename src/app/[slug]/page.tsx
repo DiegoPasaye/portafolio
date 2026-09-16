@@ -28,6 +28,13 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     description: project.seoDescription,
     keywords: project.keyPhrases,
     alternates: { canonical: url },
+    other: {
+      'geo.region': 'MX-MIC',
+      'geo.placename': 'Morelia, Michoacán',
+      'geo.position': '19.7060;-101.1950',
+      ICBM: '19.7060, -101.1950',
+      'content-language': 'es-MX',
+    },
     openGraph: {
       type: 'website',
       title,
@@ -60,22 +67,51 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         '@type': 'WebPage',
         '@id': `${canonicalUrl}#webpage`,
         url: canonicalUrl,
-        name: `${project.name} | Diego Pasaye`,
-        description: project.summary,
+        name: project.seoTitle,
+        description: project.seoDescription,
         keywords: project.keyPhrases,
         inLanguage: 'es-MX',
         isPartOf: { '@id': `${SITE_URL}/#website` },
         mainEntity: { '@id': `${canonicalUrl}#project` },
       },
+      ...(project.features
+        ? [
+            {
+              '@type': 'SoftwareApplication',
+              '@id': `${canonicalUrl}#software`,
+              name: project.name,
+              alternateName: project.slug === 'licita' ? 'Licita por Nomatech' : undefined,
+              url: canonicalUrl,
+              applicationCategory: 'BusinessApplication',
+              applicationSubCategory:
+                project.applicationSubCategory ?? 'Software de automatización',
+              operatingSystem: 'Web',
+              inLanguage: 'es-MX',
+              description: project.seoDescription,
+              creator:
+                project.slug === 'licita'
+                  ? { '@type': 'Organization', name: 'Nomatech' }
+                  : undefined,
+              author: { '@id': `${SITE_URL}/#person` },
+              featureList: project.features,
+              keywords: project.keyPhrases,
+              mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
+            },
+          ]
+        : []),
       {
         '@type': project.slug === 'polymarket-bot' ? 'SoftwareSourceCode' : 'CreativeWork',
         '@id': `${canonicalUrl}#project`,
         url: canonicalUrl,
-        name: project.name,
-        description: project.summary,
+        name: project.seoTitle,
+        headline: project.headline ?? project.seoTitle,
+        description: project.seoDescription,
+        abstract: project.seoDescription,
         image: `${SITE_URL}${project.image}`,
         inLanguage: 'es-MX',
         author: { '@id': `${SITE_URL}/#person` },
+        about: project.features ? { '@id': `${canonicalUrl}#software` } : undefined,
+        keywords: project.keyPhrases,
         mainEntityOfPage: { '@id': `${canonicalUrl}#webpage` },
         ...(project.slug === 'polymarket-bot' ? { programmingLanguage: 'Python' } : {}),
       },
@@ -162,12 +198,29 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <div>
           <p className="font-mono text-xs tracking-widest text-accent">CASO DE ESTUDIO</p>
-          <h1 className="mt-4 text-5xl font-semibold tracking-tighter md:text-7xl">{project.name}</h1>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tighter md:text-6xl">
+            <span>{project.name}</span>{' '}
+            {project.headline ? (
+              <span className="mt-2 block text-xl font-normal text-muted md:text-2xl">
+                {project.headline}
+              </span>
+            ) : null}
+          </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">{project.summary}</p>
 
           <div className="mt-10 border-y border-line py-6">
             <p className="font-mono text-xs tracking-widest text-faint">PARTICIPACIÓN</p>
             <p className="mt-3 leading-relaxed text-muted">{project.role}</p>
+            {project.roleDetails && project.roleDetails.length > 0 ? (
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted">
+                {project.roleDetails.map((detail) => (
+                  <li key={detail} className="flex items-start gap-2">
+                    <span className="text-accent">•</span>
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
 
           <div className="mt-8">
@@ -214,6 +267,43 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           ))}
         </div>
       </section>
+
+      {project.sections && project.sections.length > 0 ? (
+        <div className="mt-20 max-w-4xl space-y-16 border-t border-line pt-10 md:mt-32 md:space-y-24 md:pt-14">
+          {project.sections.map((section) => (
+            <section key={section.title} aria-label={section.title}>
+              <p className="font-mono text-xs tracking-widest text-accent uppercase">
+                {section.title}
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
+                {section.title}
+              </h2>
+              {section.paragraphs ? (
+                <div className="mt-6 flex flex-col gap-4 text-lg leading-relaxed text-muted">
+                  {section.paragraphs.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+              ) : null}
+              {section.items ? (
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  {section.items.map((item) => (
+                    <div
+                      key={item.heading}
+                      className="rounded-xl border border-line bg-surface/50 p-6"
+                    >
+                      <h3 className="font-medium text-fg text-lg">{item.heading}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted">
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          ))}
+        </div>
+      ) : null}
 
       <section className="mt-20 max-w-3xl border-t border-line pt-10 md:mt-32 md:pt-14" aria-labelledby="project-faqs">
         <p className="font-mono text-xs tracking-widest text-accent">PREGUNTAS FRECUENTES</p>
